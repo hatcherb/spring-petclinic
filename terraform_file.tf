@@ -15,5 +15,8 @@ provider "aws" {
 resource "aws_instance" "PetClinic" {
   ami           = "ami-0817d428a6fb68645"
   instance_type = "t2.medium"
+  tags		= {
+    Name	= "Terraform-Server"
+  }
 }
 
